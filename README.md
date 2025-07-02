@@ -1,4 +1,6 @@
-<p align="center">
+# Sage Intacct Transformation dbt Package ([Docs](https://fivetran.github.io/dbt_sage_intacct/))
+
+<p align="left">
     <a alt="License"
         href="https://github.com/fivetran/dbt_sage_intacct/blob/main/LICENSE">
         <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" /></a>
@@ -9,8 +11,6 @@
     <a alt="PRs">
         <img src="https://img.shields.io/badge/Contributions-welcome-blueviolet" /></a>
 </p>
-
-# Sage Intacct Transformation dbt Package ([Docs](https://fivetran.github.io/dbt_sage_intacct/))
 
 ## What does this dbt package do?
 - Produces modeled tables that leverage Sage Intacct data from [Fivetran's connector](https://fivetran.com/docs/applications/sage-intacct) in the format described by [this ERD](https://fivetran.com/docs/applications/sage-intacct#schemainformation) and builds off the output of our [Sage Intacct source package](https://github.com/fivetran/dbt_sage_intacct_source).
@@ -60,7 +60,7 @@ Include the following sage_intacct package version in your `packages.yml` file:
 ```yaml
 packages:
   - package: fivetran/sage_intacct
-    version: [">=0.6.0", "<0.7.0"] # we recommend using ranges to capture non-breaking changes automatically
+    version: [">=0.7.0", "<0.8.0"] # we recommend using ranges to capture non-breaking changes automatically
 ```
 
 Do NOT include the `sage_intacct_source` package in this file. The transformation package itself has a dependency on it and will install the source package as well.
@@ -154,7 +154,7 @@ This dbt package is dependent on the following dbt packages. These dependencies 
 ```yml
 packages:
     - package: fivetran/sage_intacct_source
-      version: [">=0.4.0", "<0.5.0"]
+      version: [">=0.5.0", "<0.6.0"]
 
     - package: fivetran/fivetran_utils
       version: [">=0.4.0", "<0.5.0"]
